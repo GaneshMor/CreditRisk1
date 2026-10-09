@@ -1,0 +1,240 @@
+{
+  "pd_chosen": "Logistic Regression",
+  "pd_reason": "Logistic Regression is within 0.005 ROC-AUC of the best model (Gradient Boosting (HistGB), 0.7134 vs 0.7087 on validation); the interpretable scorecard-style model is preferred for banking use.",
+  "ead_chosen": "Gradient Boosting (HistGB)",
+  "ead_reason": "Gradient Boosting (HistGB) has the lowest validation RMSE (5260.2348); the best linear model (Ridge, 5915.3055) is more than 2% worse.",
+  "lgd_chosen": "Linear Regression",
+  "lgd_reason": "Linear Regression is within 2% of the lowest validation RMSE (Random Forest: 0.0936 vs 0.0937); the simpler, more transparent model is preferred.",
+  "ead_chosen_val_r2": 0.5728342287136219,
+  "lgd_chosen_val_r2": 0.02987340672748362,
+  "pd_threshold_f1": 0.20946197953848758,
+  "bands": {
+    "low_max": 0.15513868151690288,
+    "high_min": 0.3086056718412421
+  },
+  "k_segments": 4,
+  "segment_descriptions": {
+    "3": "high delinquencies, high credit history, high interest rate",
+    "1": "low interest rate, low revolving utilisation, low DTI",
+    "4": "high interest rate, high loan size, high DTI",
+    "2": "low loan size, low credit history, low income"
+  },
+  "pca_variance": [
+    0.19639290295338013,
+    0.15246659854953457
+  ],
+  "factor_analysis": {
+    "kmo": 0.6112397603485763,
+    "bartlett_chi2": 328872.7415688218,
+    "bartlett_p": 0.0,
+    "eigenvalues": [
+      2.8720841394143513,
+      2.2238448178429957,
+      1.4775946536647082,
+      1.3272538144232477,
+      1.033949137847087,
+      1.0033678494045506,
+      0.7958726178301194,
+      0.6950371258644708,
+      0.582912682051244,
+      0.39634096148875486,
+      0.3219058884258436,
+      0.2369851559409782,
+      0.03285115580164603
+    ],
+    "n_factors_kaiser": 6,
+    "kmo_per_variable": {
+      "annual_inc": 0.63,
+      "loan_amnt": 0.679,
+      "dti": 0.615,
+      "int_rate": 0.566,
+      "revol_util": 0.544,
+      "revol_bal": 0.628,
+      "delinq_2yrs": 0.629,
+      "inq_last_6mths": 0.704,
+      "credit_history_yrs": 0.719,
+      "open_acc": 0.607,
+      "total_acc": 0.677,
+      "pub_rec": 0.578,
+      "sub_grade_num": 0.566
+    },
+    "suitable": true,
+    "variance_explained": [
+      0.1622197106131767,
+      0.09904272130653781,
+      0.10570882237349913,
+      0.1273250836823624,
+      0.06541888095013368,
+      0.04285870846544122
+    ]
+  },
+  "quality": {
+    "raw_rows": 466285,
+    "duplicate_ids": 0,
+    "status_counts": {
+      "Current": 224226,
+      "Fully Paid": 184739,
+      "Charged Off": 42475,
+      "Late (31-120 days)": 6900,
+      "In Grace Period": 3146,
+      "Does not meet the credit policy. Status:Fully Paid": 1988,
+      "Late (16-30 days)": 1218,
+      "Default": 832,
+      "Does not meet the credit policy. Status:Charged Off": 761
+    },
+    "rows_resolved_kept": 237695,
+    "rows_excluded_censored": 228590,
+    "default_rate_resolved": 0.21442605019037,
+    "default_rate_by_issue_year": {
+      "2007": 0.262,
+      "2008": 0.2073,
+      "2009": 0.1369,
+      "2010": 0.1404,
+      "2011": 0.1652,
+      "2012": 0.1673,
+      "2013": 0.2295,
+      "2014": 0.2622
+    },
+    "missing_pct": {
+      "mths_since_last_record": 87.91,
+      "mths_since_last_delinq": 55.95,
+      "emp_length_yrs": 3.85,
+      "revol_util": 0.1,
+      "collections_12_mths_ex_med": 0.06,
+      "total_acc": 0.01,
+      "credit_history_yrs": 0.01,
+      "pub_rec": 0.01,
+      "delinq_2yrs": 0.01,
+      "open_acc": 0.01,
+      "inq_last_6mths": 0.01,
+      "acc_now_delinq": 0.01
+    },
+    "lgd_proxy_summary": {
+      "count": 50965.0,
+      "mean": 0.9375,
+      "std": 0.0948,
+      "min": 0.0,
+      "25%": 0.8609,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    "lgd_share_at_100pct": 0.5218090846659472,
+    "no_fico_in_dataset": true,
+    "redundant_pairs_abs_corr_gt_0.7": [
+      [
+        "int_rate",
+        "sub_grade_num",
+        0.965
+      ],
+      [
+        "pub_rec",
+        "had_pub_record",
+        0.862
+      ],
+      [
+        "payment_to_income",
+        "loan_to_income",
+        0.948
+      ]
+    ],
+    "corr_with_default": {
+      "annual_inc": -0.061,
+      "mths_since_last_delinq": -0.025,
+      "total_acc": -0.023,
+      "credit_history_yrs": -0.015,
+      "revol_bal": -0.002,
+      "emp_length_yrs": 0.004,
+      "acc_now_delinq": 0.01,
+      "collections_12_mths_ex_med": 0.01,
+      "had_pub_record": 0.015,
+      "pub_rec": 0.016,
+      "had_delinq": 0.017,
+      "mths_since_last_record": 0.018,
+      "open_acc": 0.027,
+      "delinq_2yrs": 0.029,
+      "inq_last_6mths": 0.056,
+      "loan_amnt": 0.073,
+      "revol_util": 0.098,
+      "dti": 0.127,
+      "payment_to_income": 0.144,
+      "loan_to_income": 0.163,
+      "term_months": 0.174,
+      "int_rate": 0.254,
+      "sub_grade_num": 0.255
+    }
+  },
+  "reference_inputs": {
+    "loan_amnt": 12000.0,
+    "int_rate": 13.67,
+    "annual_inc": 61421.0,
+    "dti": 16.13,
+    "delinq_2yrs": 0.0,
+    "inq_last_6mths": 1.0,
+    "open_acc": 10.0,
+    "pub_rec": 0.0,
+    "revol_bal": 10988.0,
+    "revol_util": 56.6,
+    "total_acc": 23.0,
+    "credit_history_yrs": 13.834360027378509,
+    "collections_12_mths_ex_med": 0.0,
+    "acc_now_delinq": 0.0
+  },
+  "categories": {
+    "home_ownership": [
+      "ANY",
+      "MORTGAGE",
+      "NONE",
+      "OTHER",
+      "OWN",
+      "RENT"
+    ],
+    "verification_status": [
+      "Not Verified",
+      "Source Verified",
+      "Verified"
+    ],
+    "purpose": [
+      "car",
+      "credit_card",
+      "debt_consolidation",
+      "educational",
+      "home_improvement",
+      "house",
+      "major_purchase",
+      "medical",
+      "moving",
+      "other",
+      "renewable_energy",
+      "small_business",
+      "vacation",
+      "wedding"
+    ],
+    "initial_list_status": [
+      "f",
+      "w"
+    ]
+  },
+  "leakage_excluded": [
+    "out_prncp",
+    "out_prncp_inv",
+    "total_pymnt",
+    "total_pymnt_inv",
+    "total_rec_prncp",
+    "total_rec_int",
+    "total_rec_late_fee",
+    "recoveries",
+    "collection_recovery_fee",
+    "last_pymnt_d",
+    "last_pymnt_amnt",
+    "next_pymnt_d",
+    "last_credit_pull_d",
+    "loan_status",
+    "pymnt_plan"
+  ],
+  "split_sizes": {
+    "train": 142617,
+    "validation": 47539,
+    "test": 47539
+  }
+}

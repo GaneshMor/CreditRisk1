@@ -1,0 +1,47 @@
+feature,coef_per_1sd_or_dummy,odds_ratio,direction
+purpose_small_business,0.45455847180440545,1.5754776116568796,raises default risk
+loan_to_income,0.2787611168027727,1.3214916240167023,raises default risk
+int_rate,0.2517473777271964,1.2862710555202659,raises default risk
+dti,0.1767380687124839,1.1933184847408427,raises default risk
+sub_grade_num,0.17087045002030335,1.18633704912539,raises default risk
+term_months,0.16814125016761564,1.183103712443644,raises default risk
+open_acc,0.12466441717771864,1.1327682517089728,raises default risk
+revol_util,0.09680271533874164,1.1016430149119214,raises default risk
+home_ownership_RENT,0.08887707105324977,1.0929462933312548,raises default risk
+inq_last_6mths,0.08440708025892166,1.0880717361906087,raises default risk
+purpose_other,0.06709505735836106,1.0693971274092402,raises default risk
+purpose_educational,0.059725332413374355,1.0615449345137489,raises default risk
+delinq_2yrs,0.058786164178807776,1.0605484332461026,raises default risk
+verification_status_Source Verified,0.057916006847867574,1.0596259906453962,raises default risk
+purpose_vacation,0.05303364027157651,1.0544651170156147,raises default risk
+purpose_home_improvement,0.046268048028840596,1.0473551148082199,raises default risk
+purpose_infrequent_sklearn,0.04589562455304321,1.0469651278006349,raises default risk
+had_pub_record,0.04451466803914195,1.0455203123308485,raises default risk
+initial_list_status_w,0.0427318879257836,1.043658040014178,raises default risk
+credit_history_yrs,0.038904409105088175,1.0396710958094848,raises default risk
+purpose_medical,0.03841963200257232,1.0391672092142987,raises default risk
+purpose_moving,0.03153112266340198,1.0320334947269028,raises default risk
+payment_to_income,0.03038981057109707,1.0308562943240192,raises default risk
+collections_12_mths_ex_med,0.011376176608127895,1.0114411313838865,raises default risk
+home_ownership_OWN,0.010344389709799357,1.010398077873102,raises default risk
+emp_length_yrs,0.009172460796691675,1.0092146567300655,raises default risk
+annual_inc,0.00223535594656569,1.0022378562173209,raises default risk
+acc_now_delinq,0.0,1.0,lowers default risk
+had_delinq,-0.00010751223808434668,0.9998924935411492,lowers default risk
+mths_since_last_record,-0.0035176106720713964,0.9964885688724813,lowers default risk
+mths_since_last_delinq,-0.005745954037260918,0.994270522383947,lowers default risk
+pub_rec,-0.015278040972547107,0.984838076195696,lowers default risk
+verification_status_Not Verified,-0.028568281904833476,0.9718359330718362,lowers default risk
+home_ownership_infrequent_sklearn,-0.03136396020924564,0.969122786747578,lowers default risk
+revol_bal,-0.03389276303743307,0.9666751623876395,lowers default risk
+verification_status_Verified,-0.04817446465176196,0.9529675134281186,lowers default risk
+purpose_major_purchase,-0.05561551737216711,0.9459027491590954,lowers default risk
+purpose_house,-0.06155674734737676,0.9402995847182225,lowers default risk
+initial_list_status_f,-0.06155862763463618,0.9402978166865555,lowers default risk
+purpose_debt_consolidation,-0.07717185191906377,0.9257307513297188,lowers default risk
+home_ownership_MORTGAGE,-0.08668424026251102,0.9169665910553255,lowers default risk
+loan_amnt,-0.14000061656665236,0.8693576993816742,lowers default risk
+purpose_credit_card,-0.15578596674039508,0.855742328091401,lowers default risk
+total_acc,-0.16294592233307958,0.849637133566188,lowers default risk
+purpose_car,-0.19631032066671805,0.8217571868688207,lowers default risk
+purpose_wedding,-0.2689132647585594,0.7642095366723816,lowers default risk

@@ -1,0 +1,7 @@
+Model,best_params,cv_neg_rmse,fit_seconds
+Linear Regression,{},,0.9
+Ridge,{'reg__alpha': 10.0},-5916.462421223224,2.0
+Lasso,{'reg__alpha': 0.01},-5916.5117679293935,74.3
+Decision Tree,"{'reg__max_depth': 8, 'reg__min_samples_leaf': 100}",-5774.433937795621,6.3
+Random Forest,"{'reg__max_depth': 12, 'reg__min_samples_leaf': 50}",-5574.714615813581,128.3
+Gradient Boosting (HistGB),"{'reg__learning_rate': 0.1, 'reg__max_depth': 5}",-5350.778592384641,25.9

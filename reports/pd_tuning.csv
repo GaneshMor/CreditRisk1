@@ -1,0 +1,5 @@
+Model,best_params,cv_roc_auc,fit_seconds
+Logistic Regression,{'clf__C': 0.01},0.7072709281934296,3.7
+Decision Tree,"{'clf__max_depth': 6, 'clf__min_samples_leaf': 300}",0.6919256853003418,8.2
+Random Forest,"{'clf__max_depth': 12, 'clf__min_samples_leaf': 50}",0.7082110233064903,75.6
+Gradient Boosting (HistGB),"{'clf__learning_rate': 0.05, 'clf__max_depth': 5}",0.7083617461984817,22.1
